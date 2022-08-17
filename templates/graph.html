@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="graph.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="header"></div>
+
+        <div class="menubar">
+            <a class="myanswerdiarylogo" href="index.html">
+                <img src="MyAnswerDiary.png" alt=""/>
+            </a>
+            <ul>   
+                <li><a class="diary" href="diary.html">일기쓰기</a></li>
+                <li><a class="qna" href="qna.html">365Q&A</a></li>
+                <li><a class="search" href="search.html">기록 검색</a></li>
+                <li><a class="graph" href="graph.html">감정통계</a></li>
+            </ul>
+        </div>
+
+        <section class="date">
+            <div class="date-list">
+                <label for='date-yr'>년</label><hr>
+                <input id='date-yr' type='text'/><hr>
+            </div>
+
+            <div class="date-list">
+                <label for='date-mth'>월</label><hr>
+                <input id='date-mth' type='text'/><hr>
+            </div>
+
+            <div class="date-list">
+                <label for='date-date'>일 ~</label><hr>
+                <input id='date-date' type='text'/><hr>
+            </div>
+
+            <div class="date-list">
+                <label for='date-yr'>년</label><hr>
+                <input id='date-yr' type='text'/><hr>
+            </div>
+
+            <div class="date-list">
+                <label for='date-mth'>월</label><hr>
+                <input id='date-mth' type='text'/><hr>
+            </div>
+
+            <div class="date-list">
+                <label for='date-date'>일</label><hr>
+                <input id='date-date' type='text'/><hr>
+            </div>
+                  
+            <div class="date-list">
+                <a class="date-search" href="">검색</a>
+            </div>
+        </section>
+
+        <div class="text_feeling"> 2021년 07월 31일~ 2022년 07월 31일간 000님의 감정 통계입니다. </div>
+
+    <div class='wrap'>
+        <div class='container'>
+            <div class="chart doughnut1">
+                <span class="feeling">기쁨</span>
+                <span class="center">45%</span>
+            </div>
+
+            <div class="chart doughnut2">
+                <span class="feeling">분노</span>
+                <span class="center">35%</span>
+            </div>
+
+            <div class="chart doughnut3">
+                <span class="feeling">우울</span>
+                <span class="center">15%</span>
+            </div>
+
+            <div class="chart doughnut4">
+                <span class="feeling">즐거움</span>
+                <span class="center">5%</span>
+            </div>
+            
+        </div>
+    </div>
+    <script src="graph.js"></script>
+</div>
