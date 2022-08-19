@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="diary.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/diary.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="mainbox">
+      <div class="header"></div>
 
-        <div class="header"></div>
-        
-        <div class="menubar">
-            <a class="myanswerdiarylogo" href="index.html">
-                <img src="MyAnswerDiary.png" alt=""/>
-            </a>
+      <div class="menubar">
+        <a class="myanswerdiarylogo" href="index.html">
+          <img src="MyAnswerDiary.png" alt="" />
+        </a>
+        <ul>
+          <li><a class="qna" href="qna.html">365Q&A</a></li>
+          <li><a class="diary" href="diary.html">일기쓰기</a></li>
+          <li><a class="search" href="searchpage.html">기록 검색</a></li>
+          <li><a class="graph" href="graph.html">감정통계</a></li>
+        </ul>
+      </div>
+
+      <section class="write-diary">
+        <div class="write-bar">
+          <div class="write-complete">등록</div>
+
+          <div id="today">
+            <script>
+              let today = new Date();
+
+              let year = today.getFullYear();
+              let month = today.getMonth() + 1;
+              let day = today.getDate();
+              document.write(year + "년 " + month + "월 " + day + "일 ");
+
+              document.getElementById("today").style.width = "200px";
+              document.getElementById("today").style.height = "50px";
+              document.getElementById("today").style.margin = "auto";
+              document.getElementById("today").style.fontSize = "18px";
+              document.getElementById("today").style.fontWeight = "Medium";
+              document.getElementById("today").style.paddingTop = "13px";
+              document.getElementById("today").style.textAlign = "center";
+              document.getElementById("today").style.display = "initial";
+              document.getElementById("today").style.position = "absolute";
+              document.getElementById("today").style.left = "900px";
+            </script>
+          </div>
+
+          <div class="feeling">
             <ul>
-                <li><a class="qna" href="qna.html">365Q&A</a></li>
-                <li><a class="diary" href="diary.html">일기쓰기</a></li>
-                <li><a class="search" href="search.html">기록 검색</a></li>
-                <li><a class="graph" href="graph.html">감정통계</a></li>
+              <li class="feeling-list">기쁨</li>
+              <li class="feeling-list">분노</li>
+              <li class="feeling-list">우울</li>
+              <li class="feeling-list">즐거움</li>
             </ul>
+          </div>
         </div>
 
-        <section class="write-diary">
-            <div class="write-bar">
+        <div>
+          <textarea
+            class="diary-title"
+            name="title"
+            id="utitle"
+            placeholder="제목"
+          ></textarea>
+        </div>
 
-                <div class="write-complete">등록</div>
-
-                <div id="today">
-                    <script>
-                        let today = new Date();
-
-                        let year = today.getFullYear();
-                        let month = today.getMonth() + 1;
-                        let day = today.getDate();
-                        document.write(year + "년 " + month + "월 " + day + "일 ");
-
-                        document.getElementById('today').style.width='200px';
-                        document.getElementById('today').style.height='50px';
-                        document.getElementById('today').style.margin='auto';
-                        document.getElementById('today').style.fontSize='18px';
-                        document.getElementById('today').style.fontWeight='Medium';
-                        document.getElementById('today').style.paddingTop='13px';
-                        document.getElementById('today').style.textAlign='center';
-                        document.getElementById('today').style.display='initial';
-                        document.getElementById('today').style.position='absolute';
-                        document.getElementById('today').style.left='900px';
-                        
-                    </script>
-                </div>
-
-                <div  class="feeling">
-                    <ul>
-                        <li class="feeling-list">기쁨</li>
-                        <li class="feeling-list">분노</li>
-                        <li class="feeling-list">우울</li>
-                        <li class="feeling-list">즐거움</li>
-                    </ul>
-                </div>
-                
-                
-                
-                
-            </div>
-
-            <div>
-                <textarea class="diary-title" name="title" id="utitle" placeholder="제목"></textarea>
-            </div>
-
-            <div>
-                <textarea class="diary-content" name="content" id="empty" placeholder="일기를 작성해 주세요"></textarea>
-            </div>
-        </section>
+        <div>
+          <textarea
+            class="diary-content"
+            name="content"
+            id="empty"
+            placeholder="일기를 작성해 주세요"
+          ></textarea>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>

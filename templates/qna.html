@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/qna.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!-- que를 form으로 넘겨서 저장하기 위해 여기서부터 form 태그를 넣음-->
+    <div class="mainbox">
+        <div class="header"></div>
+
+        <div class="menubar">
+            <a class="myanswerdiarylogo" href="index.html">
+                <img src="MyAnswerDiary.png" alt="" />
+            </a>
+            <ul>
+                <li><a class="diary" href="diary.html">일기쓰기</a></li>
+                <li><a class="qna" href="qna.html">365Q&A</a></li>
+                <li><a class="search" href="searchpage.html">기록 검색</a></li>
+                <li><a class="graph" href="graph.html">감정통계</a></li>
+            </ul>
+        </div>
+
+        <div class="qna-box">
+
+            <h1>365 Q&A</h1>
+            <p id="desc">카테고리를 선택하면 관련 질문이 랜덤하게 나옵니다.</p>
+
+            <form method="POST" name="answer_form">
+                <div class="btn-box">
+                    <input class="btn" id="myself" type='button' value='자기 계발' id='btn1' onclick='Btn_imp()' />
+                    <span class="line"></span>
+                    <input class="btn" id="dream" type='button' value='꿈' id='btn2' onclick='Btn_dre()' />
+                    <span class="line"></span>
+                    <input class="btn" id="freind" type='button' value='인간관계' id='btn3' onclick='Btn_rel()' />
+                    <span class="line"></span>
+                    <input class="btn" id="think" type='button' value='가치관' id='btn4' onclick='Btn_val()' />
+                    <span class="line"></span>
+                    <input class="btn" id="etc" type='button' value='기타' id='btn5' onclick='Btn_etc()' />
+                </div>
+        </div>
+
+        <div class="que">
+            <p id="imp">원하는 꿈을 이루기 위해서 가장 먼저 해야 할 일은 무엇이라고 생각하시나요?</p>
+        </div>
+
+        <div class="search-result">
+
+            <div class="search-result-item" style="cursor: pointer;">
+                <p class="search-date">2022.07.30</p>
+                <div class="content">
+                    <span class="search-title">끝이 보이지 않는 취준</span>
+                    <p class="search-cont">취준 아무리 해도 끝이 보이지 않고 우울하다.</p>
+                </div>
+            </div>
+
+            <div class="search-result-item" style="cursor: pointer;">
+                <p class="search-date">2022.07.30</p>
+                <div class="content">
+                    <span class="search-title">끝이 보이지 않는 취준</span>
+                    <p class="search-cont">취준 아무리 해도 끝이 보이지 않고 우울하다.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="answer-box">
+            <table class="answer-box-table">
+                <tr>
+                    <td colspan="2" span style="color:white">
+                        <textarea class="answer" type="text" id="answer" name="answer"
+                            placeholder="2022년 07월 30일 oo님의 생각을 기록해주세요." required></textarea>
+                    </td>
+                </tr>
+                <tr class="tr-date">
+                    <td><span class="today-date">2022. 07. 30</span></td>
+                    <td><input class="submit-btn" type="button" name="dd" value="등록" onclick=answer_form.submit();> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <input type="hidden" id="que" name="que" value="">
+        </form>
+
+    </div>
+
+
+    <script>
+        const imp = document.getElementById('imp');
+        const dre = document.getElementById('dre');
+        var choose;
+        function Btn_imp() {
+
+            if (imp.style.display !== 'none') {
+                imp.style.display = 'none';
+            }
+            else {
+                imp.style.display = 'block';
+                dre.style.display = 'none';
+                rel.style.display = 'none';
+                val.style.display = 'none';
+                etc.style.display = 'none';
+                choose = imp.textContent;
+                document.getElementById("que").value = choose;
+            }
+        }
+        function Btn_dre() {
+            if (dre.style.display !== 'none') {
+                dre.style.display = 'none';
+            }
+            else {
+                dre.style.display = 'block';
+                imp.style.display = 'none';
+                rel.style.display = 'none';
+                val.style.display = 'none';
+                etc.style.display = 'none';
+                choose = dre.textContent;
+                document.getElementById("que").value = choose;
+            }
+        }
+        function Btn_rel() {
+            if (rel.style.display !== 'none') {
+                rel.style.display = 'none';
+            }
+            else {
+                rel.style.display = 'block';
+                imp.style.display = 'none';
+                dre.style.display = 'none';
+                val.style.display = 'none';
+                etc.style.display = 'none';
+                choose = rel.textContent;
+                document.getElementById("que").value = choose;
+            }
+        }
+        function Btn_val() {
+            if (val.style.display !== 'none') {
+                val.style.display = 'none';
+
+            }
+            else {
+                val.style.display = 'block';
+                imp.style.display = 'none';
+                dre.style.display = 'none';
+                rel.style.display = 'none';
+                etc.style.display = 'none';
+                choose = val.textContent;
+                document.getElementById("que").value = choose;
+            }
+        }
+        function Btn_etc() {
+            if (etc.style.display !== 'none') {
+                etc.style.display = 'none';
+            }
+            else {
+                etc.style.display = 'block';
+                imp.style.display = 'none';
+                dre.style.display = 'none';
+                rel.style.display = 'none';
+                val.style.display = 'none';
+                choose = etc.textContent;
+                document.getElementById("que").value = choose;
+            }
+        }
+
+
+    </script>
 </body>
+
 </html>
