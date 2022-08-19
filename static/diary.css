@@ -67,12 +67,16 @@ li {
 }
 
 .qna,
-.diary,
 .search,
 .graph {
   text-decoration: none;
   color: #A2A2A2;
 }
+
+.diary{text-decoration: none;
+  color: #5A7E64;
+}
+
 
 .write-diary {
   width: 870px;
@@ -103,25 +107,38 @@ li {
   border-left: 1px solid #dcdcdc;
 }
 
-.feeling {
-  width: 400px;
-  height: 50px;
+/*감정 선택 라디오 버튼*/
+
+.radio_button{
+  width: 80px;
+  float:left;
+  font-size: 15px;
+  margin-left: 13px;
 }
 
-.feelingList{
-  width: 70px;
-  height: 30px;
-  background-color: #a7a7a7;
-  color:#ffffff;  
-  border-radius: 5px; 
-  margin:10px 0 0 20px;
-  display:inline-block;
-  float: left;
-  border:none;
-  font-size: 13px;
+.radio_button input[type=radio]{
+  display:none;
+}
+
+.radio_button label{
+  display:block;
+  margin:0 auto;
   text-align: center;
-  font-weight:Medium;
-  padding:5px;
+  border-radius: 7px;
+  height: 30px;
+  padding-top: 5px;
+  font-weight: Medium;
+  margin-top: 10px;
+}
+
+.radio_button input[type=radio]:checked+label{
+  background-color: #EF9E85;
+  color:#ffffff;
+}
+
+.radio_button input[type=radio]+label{
+  background-color: #a7a7a7;
+  color:#ffffff;
 }
 
 

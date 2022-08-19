@@ -67,12 +67,16 @@ li {
   margin-right: 200px;
 }
 
-.qna,
 .diary,
 .search,
 .graph {
   text-decoration: none;
   color: #a2a2a2;
+}
+
+.qna{
+  text-decoration: none;
+  color: #5A7E64;
 }
 
 a {
