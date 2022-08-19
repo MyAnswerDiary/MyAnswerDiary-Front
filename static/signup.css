@@ -143,7 +143,7 @@ label{
   width: 91px;
   color: rgba(233,163,127,1);
   left: 860px;
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 24px;
   opacity: 1;
   text-align: left;
@@ -157,7 +157,7 @@ label{
   width: 74px;
   color: rgba(206,206,206,1);
   left: 752px;
-  font-weight: Medium;
+  font-weight: lighter;
   font-size: 24px;
   opacity: 1;
   text-align: left;
