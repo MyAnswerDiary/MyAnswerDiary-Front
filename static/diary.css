@@ -105,21 +105,23 @@ li{
     height:50px;
 }
 
-.feeling-list{
-    width: 70px;
-    height: 30px;
-    background-color: #a7a7a7;
-    color:#ffffff;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 5px;
-    padding:5px;
-    font-weight:Medium;
-    margin:10px 0 0 20px;
-    display:inline-block;
-    float: left;
-    
+
+.feelingList{
+  width: 70px;
+  height: 30px;
+  background-color: #a7a7a7;
+  color:#ffffff;  
+  border-radius: 5px; 
+  margin:10px 0 0 20px;
+  display:inline-block;
+  float: left;
+  border:none;
+  font-size: 13px;
+  text-align: center;
+  font-weight:Medium;
+  padding:5px;
 }
+
 
 .diary-title{
     resize: none;
@@ -147,6 +149,11 @@ li{
 textarea::placeholder{
     color: black;
     font-weight: Medium;
+  }
+
+  .clicked{
+    background-color: #EF9E85;
+    color:#ffffff;
   }
 
 

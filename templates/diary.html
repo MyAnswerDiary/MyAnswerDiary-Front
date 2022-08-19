@@ -51,10 +51,10 @@
 
           <div class="feeling">
             <ul>
-              <li class="feeling-list">기쁨</li>
-              <li class="feeling-list">분노</li>
-              <li class="feeling-list">우울</li>
-              <li class="feeling-list">즐거움</li>
+              <li class="feelingList">기쁨</li>
+              <li class="feelingList">분노</li>
+              <li class="feelingList">우울</li>
+              <li class="feelingList">즐거움</li>
             </ul>
           </div>
         </div>
@@ -78,5 +78,28 @@
         </div>
       </section>
     </div>
+
+    <script>
+      var feelingList=document.getElementsByClassName("feelingList");
+      function handleClick(event){
+        console.log(event.target);
+        console.log(event.target.classList);
+
+        if(event.target.classList[1]==="clicked"){
+          event.target.classList.remove("clicked");
+        }else{
+          for(var i=0; i<feelingList.length; i++){
+            feelingList[i].classList.remove("clicked");
+          }
+          event.target.classList.add("clicked");
+        }
+      }
+      function init(){
+        for (var i=0; i<feelingList.length; i++){
+          feelingList[i].addEventListener("click",handleClick);
+        }
+      }
+      init();
+    </script>
   </body>
 </html>
