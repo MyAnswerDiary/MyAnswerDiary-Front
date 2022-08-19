@@ -108,7 +108,37 @@ li {
   height: 50px;
 }
 
-.feeling-list {
+.feelingList{
+  width: 70px;
+  height: 30px;
+  background-color: #a7a7a7;
+  color:#ffffff;  
+  border-radius: 5px; 
+  margin:10px 0 0 20px;
+  display:inline-block;
+  float: left;
+  border:none;
+  font-size: 13px;
+  text-align: center;
+  font-weight:Medium;
+  padding:5px;
+}
+
+
+.diary-title{
+    resize: none;
+    width:800px;
+    height:50px;
+    border:none;
+    border-bottom: 1px solid #a7a7a7;
+    margin: 0 35px 0 35px;
+    padding-top:10px;
+    font-size: 20px;
+    font-weight:Medium;
+    color:black;
+}
+
+.feelingList {
   width: 70px;
   height: 30px;
   background-color: #a7a7a7;
@@ -147,7 +177,18 @@ li {
   padding-top: 10px;
 }
 
+textarea::placeholder{
+    color: black;
+    font-weight: Medium;
+  }
+
+  .clicked{
+    background-color: #EF9E85;
+    color:#ffffff;
+  }
+
 textarea::placeholder {
   color: black;
   font-weight: Medium;
 }
+
