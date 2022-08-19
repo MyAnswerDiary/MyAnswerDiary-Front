@@ -1,5 +1,4 @@
 * {
-  font-family: Consolas, sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -11,7 +10,7 @@ body {
 
 .mainbox {
   width: 100%;
-  height: 1080px;
+  height: max-content;
   background: rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
@@ -178,6 +177,7 @@ h1 {
 }
 
 .search-cont {
+  width: fit-content;
   font-size: 18px;
   color: #525252;
 }
@@ -198,12 +198,13 @@ tr {
 
 .answer-box-table {
   width: 100%;
+  margin-bottom: 80px;
 }
 
 .answer {
   width: 100%;
   height: 132px;
-  padding: 10px 10px;
+  padding: 20px 20px;
   font-size: 21px;
   color: #cecece;
   resize: none;
@@ -217,7 +218,8 @@ tr {
   font-size: 21px;
 }
 
-.tr-date {
+#today-date {
+  padding-left: 20px;
 }
 
 .submit-btn {
@@ -226,4 +228,10 @@ tr {
   float: right;
   border: none;
   background-color: white;
+}
+
+#submit-btn {
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

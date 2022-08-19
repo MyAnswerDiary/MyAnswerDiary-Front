@@ -70,15 +70,20 @@
         </div>
         <div class="answer-box">
             <table class="answer-box-table">
+                <colgroup>
+                    <col width="93%" />
+                    <col width="7%" />
+                </colgroup>
                 <tr>
                     <td colspan="2" span style="color:white">
                         <textarea class="answer" type="text" id="answer" name="answer"
                             placeholder="2022년 07월 30일 oo님의 생각을 기록해주세요." required></textarea>
                     </td>
                 </tr>
-                <tr class="tr-date">
-                    <td><span class="today-date">2022. 07. 30</span></td>
-                    <td><input class="submit-btn" type="button" name="dd" value="등록" onclick=answer_form.submit();> 
+                <tr>
+                    <td id="today-date"><span class="today-date">2022. 07. 30</span></td>
+                    <td id="submit-btn"><input class="submit-btn" type="button" name="dd" value="등록"
+                            onclick=answer_form.submit();> 
                     </td>
                 </tr>
             </table>
