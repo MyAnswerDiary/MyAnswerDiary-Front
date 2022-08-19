@@ -51,19 +51,19 @@
 
           <div class="feeling">
               <div class="radio_button">
-                <input id="radio-1" type="radio" name="feelinglist" value="happy">
+                <input id="radio-1" type="radio" name="hashtag" value="happy">
                 <label for="radio-1">기쁨</label>
               </div>
               <div class="radio_button">
-                <input id="radio-2" type="radio" name="feelinglist" value="angry">
+                <input id="radio-2" type="radio" name="hashtag" value="angry">
                 <label for="radio-2">분노</label>
               </div>
               <div class="radio_button">
-                <input id="radio-3" type="radio" name="feelinglist" value="sad">
+                <input id="radio-3" type="radio" name="hashtag" value="sad">
                 <label for="radio-3">우울</label>
               </div>
               <div class="radio_button">
-                <input id="radio-4" type="radio" name="feelinglist" value="joy">
+                <input id="radio-4" type="radio" name="hashtag" value="joy">
                 <label for="radio-4">즐거움</label>
               </div>
             </div>
@@ -88,28 +88,5 @@
         </div>
       </section>
     </div>
-
-    <script>
-      var feelingList=document.getElementsByClassName("feelingList");
-      function handleClick(event){
-        console.log(event.target);
-        console.log(event.target.classList);
-
-        if(event.target.classList[1]==="clicked"){
-          event.target.classList.remove("clicked");
-        }else{
-          for(var i=0; i<feelingList.length; i++){
-            feelingList[i].classList.remove("clicked");
-          }
-          event.target.classList.add("clicked");
-        }
-      }
-      function init(){
-        for (var i=0; i<feelingList.length; i++){
-          feelingList[i].addEventListener("click",handleClick);
-        }
-      }
-      init();
-    </script>
   </body>
 </html>
